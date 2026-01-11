@@ -1,0 +1,3 @@
+let playerList = []
+
+export { playerList };
