@@ -32,17 +32,22 @@ const drawPlayerCard = (player) => {
   nameHeading.textContent = player.name;
   nameHeading.setAttribute("class", "nameDisplay");
 
-  let playerScoreDisplay = document.createElement("h2");
+  // let playerScoreDisplay = document.createElement("h2");
+  // playerScoreDisplay.setAttribute("class", "scoreDisplay");
+  // playerScoreDisplay.textContent = 0;
+
+  let playerScoreDisplay = document.createElement("input");
   playerScoreDisplay.setAttribute("class", "scoreDisplay");
-  playerScoreDisplay.textContent = 0;
+  playerScoreDisplay.setAttribute("type", "number");
+  playerScoreDisplay.setAttribute("value", score);
 
   let increaseScoreButton = document.createElement("button");
   increaseScoreButton.setAttribute("class", "cardButton");
-  increaseScoreButton.textContent = "+";
+  increaseScoreButton.textContent = "+1";
 
   let decreaseScoreButton = document.createElement("button");
   decreaseScoreButton.setAttribute("class", "cardButton");
-  decreaseScoreButton.textContent = "-";
+  decreaseScoreButton.textContent = "-1";
 
   increaseScoreButton.addEventListener("click", (event) => {
     event.preventDefault();
@@ -58,12 +63,10 @@ const drawPlayerCard = (player) => {
   });
 
   const increaseScore = () => {
-    score++;
-    playerScoreDisplay.textContent = score;
+    playerScoreDisplay.valueAsNumber++;
   };
   const decreaseScore = () => {
-    score--;
-    playerScoreDisplay.textContent = score;
+    playerScoreDisplay.valueAsNumber--;
   };
 
   playerCard.appendChild(decreaseScoreButton);
