@@ -1,4 +1,6 @@
-import { playerList } from "./playerList";
+import { clearView } from "./clearView";
+import { drawSetupView } from "./drawSetupView";
+import { playerList, clearList } from "./playerList";
 
 const drawPlayView = () => {
   const main = document.querySelector("main");
@@ -8,6 +10,14 @@ const drawPlayView = () => {
 
   playerList.forEach((player) => {
     playDiv.appendChild(drawPlayerCard(player));
+  });
+
+  const resetButton = document.getElementById("resetButton");
+  resetButton.addEventListener("click", (event) => {
+    event.preventDefault();
+    clearList();
+    clearView();
+    drawSetupView();
   });
 };
 

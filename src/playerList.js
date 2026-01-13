@@ -1,3 +1,7 @@
-let playerList = []
+let playerList = [];
 
-export { playerList };
+const clearList = () => {
+  playerList.length = 0;
+};
+
+export { playerList, clearList };
