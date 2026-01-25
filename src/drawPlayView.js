@@ -40,12 +40,14 @@ const drawPlayerCard = (player) => {
   playerScoreDisplay.setAttribute("value", score);
 
   playerCard.appendChild(decreaseScoreButton(-1));
-  playerCard.appendChild(decreaseScoreButton(-5));
-  playerCard.appendChild(decreaseScoreButton(-10));
   playerCard.appendChild(nameHeading);
-  playerCard.appendChild(playerScoreDisplay);
   playerCard.appendChild(increaseScoreButton(1));
+
+  playerCard.appendChild(decreaseScoreButton(-5));
+  playerCard.appendChild(playerScoreDisplay);
   playerCard.appendChild(increaseScoreButton(5));
+
+  playerCard.appendChild(decreaseScoreButton(-10));
   playerCard.appendChild(increaseScoreButton(10));
 
   const decreaseButtons = playerCard.querySelectorAll(".cardButtonMinus");

@@ -92,3 +92,37 @@ div.playerDiv label > input {
 #startButton {
   grid-column: 1 /-1;
 }
+
+#playDiv {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.playerCard {
+  display: grid;
+  grid-template-columns: 1fr 4fr 1fr;
+  grid-template-rows: repeat(6, 1fr);
+  gap: 3px;
+}
+
+.nameDisplay {
+  grid-column: 2/-2;
+  grid-row: 1/4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  padding: 5px;
+  margin: auto;
+}
+
+.scoreDisplay {
+  grid-column: 2/-2;
+  grid-row: 4/-1;
+}
+
+.cardButtonPlus,
+.cardButtonMinus {
+  grid-row: span 2;
+}
