@@ -26,6 +26,10 @@ const drawPlayerForm = () => {
   const colorInput = document.createElement("input");
   colorInput.setAttribute("type", "color");
   colorInput.setAttribute("class", "colorInput");
+  colorInput.setAttribute(
+    "value",
+    `${defaultColors[setupForm.childElementCount]}`,
+  );
 
   playerDiv.appendChild(playerLabel);
   playerLabel.appendChild(playerInput);
@@ -43,4 +47,15 @@ const removePlayerForm = () => {
   }
 };
 
-export { addPlayerForm, removePlayerForm };
+const defaultColors = [
+  "#e6194B",
+  "#f58231",
+  "#ffe119",
+  "#3cb44b",
+  "#42d4f4",
+  "#4363d8",
+  "#911eb4",
+  "#f032e6",
+];
+
+export { addPlayerForm, removePlayerForm, defaultColors };

@@ -1,3 +1,86 @@
 :root {
   font-family: sans-serif;
 }
+
+* {
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100vh;
+}
+
+html {
+  background-color: rgb(78, 78, 78);
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  background-color: #f8f8f8;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+body > * {
+  padding: 10px;
+}
+
+header {
+  height: 30px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: space-between;
+}
+
+#setupForm {
+  flex-grow: 1;
+  display: grid;
+  grid-template-rows: repeat(8, 1fr);
+  gap: 5px;
+}
+
+.playerDiv {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  background-color: rgb(234, 234, 234);
+  border: 1px solid black;
+}
+
+div.playerDiv > label {
+  display: flex;
+}
+
+div.playerDiv label > input {
+  width: 60%;
+  margin-left: auto;
+  /* align-items: stretch; */
+}
+
+#buttonDiv {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 5px;
+}
+
+#instructionSpan {
+  grid-column: 1 /-1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#startButton {
+  grid-column: 1 /-1;
+}
