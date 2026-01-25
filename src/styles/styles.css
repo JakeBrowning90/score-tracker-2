@@ -52,13 +52,17 @@ main {
 .playerDiv {
   display: flex;
   flex-direction: column;
-  gap: 5px;
-  background-color: rgb(234, 234, 234);
-  border: 1px solid black;
+  padding: 3px;
+  gap: 3px;
+  background-color: rgb(231, 231, 231);
+  /* border: 1px solid black; */
+  margin: auto;
+  border-radius: 5px;
 }
 
 div.playerDiv > label {
   display: flex;
+  margin-left: 5px;
 }
 
 div.playerDiv label > input {
@@ -71,7 +75,7 @@ div.playerDiv label > input {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(3, 1fr);
-  gap: 5px;
+  gap: 3px;
 }
 
 #instructionSpan {
@@ -79,6 +83,10 @@ div.playerDiv label > input {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.errorMessage {
+  color: red;
 }
 
 #startButton {
