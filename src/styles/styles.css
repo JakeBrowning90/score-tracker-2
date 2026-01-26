@@ -25,7 +25,7 @@ body {
 }
 
 body > * {
-  padding: 10px;
+  padding: 5px;
 }
 
 header {
@@ -33,6 +33,7 @@ header {
   display: flex;
   align-items: center;
   gap: 5px;
+  background-color: rgb(231, 231, 231);
 }
 
 main {
@@ -40,6 +41,7 @@ main {
   flex-direction: column;
   flex-grow: 1;
   justify-content: space-between;
+  overflow-y: scroll;
 }
 
 #setupForm {
@@ -55,7 +57,6 @@ main {
   padding: 3px;
   gap: 3px;
   background-color: rgb(231, 231, 231);
-  /* border: 1px solid black; */
   margin: auto;
   border-radius: 5px;
 }
@@ -68,7 +69,6 @@ div.playerDiv > label {
 div.playerDiv label > input {
   width: 60%;
   margin-left: auto;
-  /* align-items: stretch; */
 }
 
 #buttonDiv {
@@ -96,7 +96,7 @@ div.playerDiv label > input {
 #playDiv {
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  gap: 3px;
 }
 
 .playerCard {
@@ -104,22 +104,30 @@ div.playerDiv label > input {
   grid-template-columns: 1fr 4fr 1fr;
   grid-template-rows: repeat(6, 1fr);
   gap: 3px;
+  padding: 3px;
+  border-radius: 5px;
 }
 
-.nameDisplay {
+.nameDisplay,
+.scoreDisplay {
   grid-column: 2/-2;
-  grid-row: 1/4;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: white;
-  padding: 5px;
   margin: auto;
+  padding: 3px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.nameDisplay {
+  grid-row: 1/4;
+  background-color: white;
 }
 
 .scoreDisplay {
-  grid-column: 2/-2;
   grid-row: 4/-1;
+  width: 33%;
 }
 
 .cardButtonPlus,
