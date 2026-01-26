@@ -36,6 +36,10 @@ header {
   background-color: rgb(231, 231, 231);
 }
 
+#resetButton {
+  margin-left: auto;
+}
+
 main {
   display: flex;
   flex-direction: column;
