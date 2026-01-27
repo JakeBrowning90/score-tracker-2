@@ -20,10 +20,10 @@ const drawPlayerForm = () => {
   playerInput.setAttribute("class", "playerInput");
   playerInput.setAttribute("maxlength", "10");
   // Testing attribute, REMOVE FOR PROD
-  playerInput.setAttribute(
-    "value",
-    `${testingNames[setupForm.childElementCount]}`,
-  );
+  // playerInput.setAttribute(
+  //   "value",
+  //   `${testingNames[setupForm.childElementCount]}`,
+  // );
 
   const colorLabel = document.createElement("label");
   colorLabel.textContent = `Player color: `;
@@ -63,15 +63,15 @@ const defaultColors = [
   "#f032e6",
 ];
 
-const testingNames = [
-  "Annie",
-  "Benny",
-  "Carly",
-  "Danny",
-  "Emily",
-  "Fritz",
-  "Gloria",
-  "Harper",
-];
+// const testingNames = [
+//   "Annie",
+//   "Benny",
+//   "Carly",
+//   "Danny",
+//   "Emily",
+//   "Fritz",
+//   "Gloria",
+//   "Harper",
+// ];
 
 export { addPlayerForm, removePlayerForm, defaultColors };
